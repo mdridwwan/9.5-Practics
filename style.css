@@ -1,0 +1,140 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+header {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    background-color: tomato;
+    height: 100%;
+    width: 80%;
+    /* display: flex;
+    align-items: center; */
+}
+
+label.Logo {
+    color: white;
+    font-size: 40px;
+}
+
+nav ul {
+    /* display: flex;
+    justify-content: flex-end; */
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    font-family: arial;
+    text-transform: uppercase;
+}
+
+.logo {
+    width: 30%;
+    color: #fff;
+}
+
+.homebar {
+    /* height: 100%; */
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.homebar a {
+    text-decoration: none;
+    padding: 17px 25px;
+    color: #fff;
+}
+
+.homebar a:hover {
+    background-color: rgba(238, 238, 238, 0.459);
+}
+
+#flex {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+}
+
+.flexbox {
+    border: 2px solid black;
+    padding-top: 4%;
+    width: 40%;
+    height: 300px;
+    background-color: violet;
+    /* margin: 0 10px; */
+}
+
+#grid {
+    display: flex;
+    display: flex;
+    justify-content: center;
+}
+
+#grid-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.user {
+    height: 300px;
+    background-color: aqua;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 688px) {
+    #grid-container {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 20px;
+        grid-gap: 20px;
+    }
+    #flex {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    .flexbox {
+        width: 100%;
+        margin: 0 0 5px 0;
+    }
+    nav {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:900px) and (min-width: 689px) {
+    #grid-container {
+        grid-template-columns: repeat(2, 1fr)
+    }
+    .flexbox {
+        width: 50%;
+    }
+}
